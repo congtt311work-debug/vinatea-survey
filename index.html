@@ -1,112 +1,237 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Meta tags để hiển thị đẹp khi gửi qua Zalo / Facebook -->
     <meta property="og:title" content="Hỗ trợ Vinatea - Khảo sát Thương hiệu Quốc gia 2026">
-    <meta property="og:description"
-        content="Mong Anh/Chị dành 3-5 phút thực hiện khảo sát về mức độ nhận biết thương hiệu Vinatea.">
-    <!-- Bạn có thể thêm link ảnh logo Vinatea vào content bên dưới để hiện thumbnail trên Zalo -->
-    <meta property="og:image" content="LINK_ANH_LOGO_VINATEA_CUA_BAN.jpg">
-
+    <meta property="og:description" content="Mong Anh/Chị dành 3-5 phút thực hiện khảo sát về mức độ nhận biết thương hiệu Vinatea.">
     <title>Khảo sát Vinatea - Thương hiệu Quốc gia 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* Tùy chỉnh màu sắc thương hiệu Vinatea (Xanh lá) */
-        .text-vinatea {
-            color: #00763A;
+        body { font-family: 'Montserrat', sans-serif; }
+        .bg-vinatea-dark { background-color: #1a4a28; }
+        .text-vinatea-dark { color: #1a4a28; }
+        .bg-vinatea-light { background-color: #eaf1ea; }
+        
+        .bg-b2c-dark { background-color: #d19a22; }
+        .text-b2c-dark { color: #d19a22; }
+        .bg-b2c-light { background-color: #fcf6e8; }
+        
+        /* Hình dạng Ribbon cho Tiêu đề */
+        .ribbon {
+            position: relative;
+            background: #1a4a28;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            margin: 20px auto;
+            font-weight: 800;
         }
-
-        .bg-vinatea {
-            background-color: #00763A;
+        .ribbon:before, .ribbon:after {
+            content: "";
+            position: absolute;
+            display: block;
+            bottom: -12px;
+            border: 1.5em solid #1a4a28;
+            z-index: -1;
         }
-
-        .hover-bg-vinatea:hover {
-            background-color: #005c2d;
+        .ribbon:before {
+            left: -1.5em;
+            border-right-width: 1.5em;
+            border-left-color: transparent;
+        }
+        .ribbon:after {
+            right: -1.5em;
+            border-left-width: 1.5em;
+            border-right-color: transparent;
+        }
+        
+        /* Font chữ nghiêng phần cuối */
+        .dancing-font {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        /* Nền Gradient mô phỏng đồi chè */
+        .tea-bg {
+            background: linear-gradient(180deg, #f0f7f0 0%, #eaf1ea 50%, #c5e0c5 100%);
         }
     </style>
 </head>
-
-<body class="bg-gray-100 min-h-screen flex justify-center py-8 px-4 font-sans text-gray-800">
-
-    <div class="max-w-md w-full bg-white rounded-xl shadow-lg overflow-hidden border-t-4 border-[#00763A]">
-        <!-- Phần Header & Logo -->
-        <div class="text-center p-6 bg-green-50">
-            <h2 class="text-xl font-bold text-blue-800 mb-1">Vietnam Value</h2>
-            <h3 class="text-sm font-bold text-gray-600 mb-4">THƯƠNG HIỆU QUỐC GIA VIỆT NAM</h3>
-
-            <h1 class="text-2xl font-black text-vinatea mt-4">
-                NHỜ ANH/CHỊ/BẠN<br>HỖ TRỢ VINATEA!
-            </h1>
-        </div>
-
-        <!-- Phần Nội dung giới thiệu -->
-        <div class="p-6 text-center">
-            <p class="mb-4 text-gray-700 leading-relaxed">
-                Vinatea đang tham gia <strong>Chương trình Thương hiệu Quốc gia Việt Nam 2026</strong>.
-                <br>Mong Anh/Chị dành khoảng 3-5 phút để thực hiện khảo sát về mức độ nhận biết thương hiệu.
-            </p>
-            <div class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-4 py-2 rounded-full mb-6">
-                THỜI GIAN: Từ ngày 22/7 đến hết ngày 26/7/2026
-            </div>
-
-            <!-- Các nút bấm điều hướng -->
-            <div class="space-y-4">
-                <!-- Nút B2B -->
-                <div class="border-2 border-gray-200 rounded-lg p-4 hover:border-[#00763A] transition-colors">
-                    <h3 class="font-bold text-lg mb-2 text-gray-800">KHẢO SÁT B2B <br><span
-                            class="text-sm text-gray-500 font-normal">(DOANH NGHIỆP)</span></h3>
-                    <a href="https://admin.surveytrue.com/survey/preview/e476d908979c4948dd061d4c72?surveyCode=e476d908979c4948dd061d4c72"
-                        target="_blank" rel="noopener noreferrer"
-                        class="block w-full bg-vinatea hover-bg-vinatea text-white font-bold py-3 rounded-lg text-center transition-all shadow-md">
-                        THAM GIA NGAY
-                    </a>
-                </div>
-
-                <!-- Nút B2C -->
-                <div class="border-2 border-gray-200 rounded-lg p-4 hover:border-[#00763A] transition-colors">
-                    <h3 class="font-bold text-lg mb-2 text-gray-800">KHẢO SÁT B2C <br><span
-                            class="text-sm text-gray-500 font-normal">(CÁ NHÂN)</span></h3>
-                    <a href="https://admin.surveytrue.com/survey/preview/4c2a7d2df867efd1b16d5c07cf?surveyCode=4c2a7d2df867efd1b16d5c07cf"
-                        target="_blank" rel="noopener noreferrer"
-                        class="block w-full bg-vinatea hover-bg-vinatea text-white font-bold py-3 rounded-lg text-center transition-all shadow-md">
-                        THAM GIA NGAY
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Phần Lưu ý quan trọng -->
-        <div class="bg-gray-50 p-6 border-t border-gray-200 text-left">
-            <h4 class="font-bold text-red-600 mb-3 flex items-center">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
-                    </path>
-                </svg>
-                LƯU Ý QUAN TRỌNG
-            </h4>
-            <ul class="text-sm text-gray-600 space-y-2 list-disc pl-5">
-                <li>Vui lòng thực hiện khảo sát liên tục đến hết bảng hỏi, không thoát giữa chừng.</li>
-                <li>Đảm bảo kết nối mạng ổn định.</li>
-                <li>Đọc, nghe hoặc xem đầy đủ các phương án trước khi trả lời.</li>
-                <li>Những kết quả có thời gian thực hiện quá ngắn hoặc chưa xem đầy đủ các phương án có thể không được
-                    hệ thống ghi nhận.</li>
-            </ul>
-        </div>
-
-        <!-- Footer -->
-        <div class="p-6 bg-[#00763A] text-white text-center rounded-b-xl">
-            <p class="text-sm mb-2 opacity-90">Mỗi lượt tham gia của Anh/Chị là một sự ủng hộ quý báu dành cho Vinatea!
-            </p>
-            <p class="font-bold">TRÂN TRỌNG CẢM ƠN SỰ HỖ TRỢ CỦA ANH/CHỊ!</p>
-        </div>
+<body class="tea-bg min-h-screen flex justify-center p-0 sm:p-4 text-gray-800 relative z-0">
+    
+    <!-- Background mờ làm điểm nhấn -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 opacity-40 pointer-events-none">
+        <div class="absolute -top-10 -left-10 w-64 h-64 rounded-full bg-green-200 blur-3xl"></div>
+        <div class="absolute top-1/2 -right-20 w-80 h-80 rounded-full bg-yellow-100 blur-3xl"></div>
+        <div class="absolute -bottom-20 left-1/4 w-96 h-96 rounded-full bg-green-300 blur-3xl"></div>
     </div>
 
-</body>
+    <div class="max-w-xl w-full bg-white/90 backdrop-blur-md sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col relative z-0 border border-white/60">
+        
+        <!-- Header: Logo Vinatea và Vietnam Value -->
+        <div class="flex justify-between items-center p-6 pb-2">
+            <!-- Vinatea Logo Box -->
+            <div class="bg-[#FFEB00] px-5 py-2 text-center rounded-sm shadow-sm flex flex-col justify-center">
+                <div class="text-xl sm:text-2xl font-black tracking-widest text-[#1a4a28] leading-none">VINATEA</div>
+                <div class="text-[0.6rem] sm:text-xs font-bold tracking-widest text-[#1a4a28] mt-1">SINCE 1958</div>
+            </div>
+            
+            <!-- Vietnam Value Logo -->
+            <div class="text-center flex flex-col items-center">
+                <div class="flex gap-1 mb-1">
+                    <div class="w-3 h-3 sm:w-4 sm:h-4 bg-green-600"></div><div class="w-3 h-3 sm:w-4 sm:h-4 bg-blue-600"></div>
+                </div>
+                <div class="flex gap-1">
+                    <div class="w-3 h-3 sm:w-4 sm:h-4 bg-blue-600"></div><div class="w-3 h-3 sm:w-4 sm:h-4 bg-green-600"></div>
+                </div>
+                <div class="text-[0.6rem] sm:text-[0.7rem] font-bold text-blue-800 leading-tight mt-1">Vietnam Value<br><span class="uppercase text-gray-600 font-bold">THƯƠNG HIỆU QUỐC GIA<br>VIỆT NAM</span></div>
+            </div>
+        </div>
 
+        <!-- Tiêu đề Ribbon -->
+        <div class="px-8 mt-2 mb-6">
+            <div class="ribbon shadow-lg flex items-center justify-center gap-3 rounded-sm text-lg sm:text-2xl leading-tight">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 sm:h-10 sm:w-10 text-[#FFEB00] shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.158 9.948a.5.5 0 01.342-.047l2.8.933a1.5 1.5 0 001.9-1.424V5.59a1.5 1.5 0 00-1.9-1.424l-2.8.933a.5.5 0 01-.342-.047L8.514 4.54A2 2 0 007.13 4.19L4.85 4.646A2 2 0 003.5 6.608v6.784a2 2 0 001.35 1.962l2.28.456a2 2 0 001.384-.35l1.644-1.112z" clip-rule="evenodd" />
+                  <path d="M4 14v4a2 2 0 104 0v-2.316l-3.32-.664A2.001 2.001 0 014 14z" />
+                </svg>
+                <span>NHỜ ANH/CHỊ/BẠN<br>HỖ TRỢ VINATEA!</span>
+            </div>
+        </div>
+
+        <!-- Đoạn giới thiệu -->
+        <div class="px-6 text-center">
+            <p class="text-sm sm:text-base font-medium text-gray-800 leading-relaxed mb-4">
+                Vinatea đang tham gia <span class="text-vinatea-dark font-bold">Chương trình Thương hiệu Quốc gia Việt Nam 2026.</span><br>
+                Mong Anh/Chị dành khoảng <span class="font-bold">3–5 phút</span> để thực hiện khảo sát<br>về mức độ nhận biết thương hiệu.
+            </p>
+            
+            <div class="inline-flex items-center gap-2 border border-vinatea-dark rounded-full px-5 py-2 mb-8 bg-white shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-vinatea-dark" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-sm font-bold text-gray-800 uppercase">Thời gian thực hiện:</span>
+                <span class="text-sm font-medium">Từ ngày 22/7 đến hết ngày 26/7/2026</span>
+            </div>
+        </div>
+
+        <!-- Nút bấm Khảo sát -->
+        <div class="px-6 space-y-5 pb-8">
+            
+            <!-- Block B2B -->
+            <div class="bg-vinatea-light border-2 border-vinatea-dark rounded-xl p-5 flex flex-col sm:flex-row items-center gap-4 relative overflow-hidden group shadow-md transition-all hover:shadow-lg hover:-translate-y-1">
+                
+                <!-- Icon Nền mờ -->
+                <div class="absolute -right-6 -top-6 text-green-700/5 h-40 w-40">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                </div>
+                
+                <!-- Icon Doanh Nghiệp -->
+                <div class="bg-vinatea-dark text-white p-4 rounded-full shrink-0 z-10 shadow-inner">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                    </svg>
+                </div>
+                
+                <div class="flex-1 text-center sm:text-left z-10">
+                    <h3 class="font-black text-2xl text-vinatea-dark">KHẢO SÁT B2B</h3>
+                    <p class="text-vinatea-dark font-semibold text-lg">(DOANH NGHIỆP)</p>
+                </div>
+                
+                <!-- Button -->
+                <a href="https://admin.surveytrue.com/survey/preview/e476d908979c4948dd061d4c72?surveyCode=e476d908979c4948dd061d4c72" 
+                   target="_blank" rel="noopener noreferrer"
+                   class="z-10 bg-vinatea-dark text-white font-bold py-3 px-8 rounded-full whitespace-nowrap hover:bg-[#12361b] transition-colors shadow-lg flex items-center gap-2 group-hover:shadow-xl">
+                    THAM GIA NGAY
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+
+            <!-- Block B2C -->
+            <div class="bg-b2c-light border-2 border-[#d19a22] rounded-xl p-5 flex flex-col sm:flex-row items-center gap-4 relative overflow-hidden group shadow-md transition-all hover:shadow-lg hover:-translate-y-1">
+                
+                <!-- Icon Nền mờ -->
+                <div class="absolute -right-6 -top-6 text-yellow-700/5 h-40 w-40">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+
+                <!-- Icon Cá Nhân (Heart) -->
+                <div class="bg-b2c-dark text-white p-4 rounded-full shrink-0 z-10 shadow-inner">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </div>
+                
+                <div class="flex-1 text-center sm:text-left z-10">
+                    <h3 class="font-black text-2xl text-b2c-dark">KHẢO SÁT B2C</h3>
+                    <p class="text-b2c-dark font-semibold text-lg">(CÁ NHÂN)</p>
+                </div>
+                
+                <!-- Button -->
+                <a href="https://admin.surveytrue.com/survey/preview/4c2a7d2df867efd1b16d5c07cf?surveyCode=4c2a7d2df867efd1b16d5c07cf" 
+                   target="_blank" rel="noopener noreferrer"
+                   class="z-10 bg-b2c-dark text-white font-bold py-3 px-8 rounded-full whitespace-nowrap hover:bg-[#b07f18] transition-colors shadow-lg flex items-center gap-2 group-hover:shadow-xl">
+                    THAM GIA NGAY
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+            
+        </div>
+
+        <!-- Phần Footer & Lưu ý -->
+        <div class="mt-auto relative z-10">
+            <!-- Đồi chè bằng SVG border -->
+            <svg viewBox="0 0 1440 120" class="w-full h-auto -mb-1 text-white block fill-[#eaf1ea]" preserveAspectRatio="none">
+                <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+            </svg>
+            
+            <div class="bg-[#eaf1ea] px-8 pb-10 pt-4">
+                
+                <!-- Hộp Lưu ý quan trọng -->
+                <div class="relative bg-white/70 backdrop-blur-sm p-6 rounded-xl border border-white/80 shadow-md mb-8">
+                    <!-- Banner Lưu ý -->
+                    <div class="absolute -top-4 left-6 bg-vinatea-dark text-white font-bold px-5 py-1.5 rounded-sm uppercase text-sm shadow-sm flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                          <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                        </svg>
+                        LƯU Ý QUAN TRỌNG
+                    </div>
+                    
+                    <ul class="mt-4 space-y-3 text-sm font-medium text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <svg class="h-5 w-5 text-green-600 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Vui lòng thực hiện khảo sát liên tục đến hết bảng hỏi, không thoát giữa chừng.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="h-5 w-5 text-green-600 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Đảm bảo kết nối mạng ổn định.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="h-5 w-5 text-green-600 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Đọc, nghe hoặc xem đầy đủ các phương án trước khi trả lời.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="h-5 w-5 text-green-600 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Những kết quả có thời gian thực hiện quá ngắn hoặc chưa xem đầy đủ các phương án có thể không được hệ thống ghi nhận.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Lời cảm ơn -->
+                <div class="text-center relative">
+                    <p class="dancing-font text-2xl sm:text-3xl text-vinatea-dark mb-4 drop-shadow-sm">
+                        Mỗi lượt tham gia của Anh/Chị<br>
+                        là một sự ủng hộ quý báu dành cho <span class="text-[#d19a22]">Vinatea!</span> 💛
+                    </p>
+                    <div class="inline-block bg-white text-vinatea-dark font-bold px-6 py-2.5 rounded-full text-xs sm:text-sm shadow-md border border-green-100 uppercase tracking-wide">
+                        🌿 TRÂN TRỌNG CẢM ƠN SỰ HỖ TRỢ CỦA ANH/CHỊ! 🌿
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
 </html>
