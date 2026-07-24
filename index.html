@@ -43,6 +43,13 @@
             background-color: #fcf6e8;
         }
 
+        .text-3d-yellow {
+            color: #FFC000;
+            text-shadow:
+                0.08em 0.08em 0px #8b2800,
+                0.15em 0.15em 0px #8b2800;
+        }
+
         /* Hình dạng Ribbon cho Tiêu đề */
         .ribbon {
             position: relative;
@@ -116,15 +123,67 @@
 
         <!-- Đoạn giới thiệu -->
         <div class="px-6 text-center">
-            <p class="text-sm sm:text-base font-medium text-gray-800 leading-relaxed mb-4">
+            <p class="text-sm sm:text-base font-medium text-gray-800 leading-snug mb-0 sm:mb-2">
                 Vinatea đang tham gia <span class="text-vinatea-dark font-bold">Chương trình Thương hiệu Quốc gia Việt
                     Nam 2026.</span><br>
-                Mong Anh/Chị dành khoảng <span class="font-bold">3–5 phút</span> để thực hiện khảo sát<br>về mức độ nhận
-                biết thương hiệu.
+                Mong Anh/Chị dành chút thời gian của mình để thực hiện khảo sát về mức độ nhận
+                biết thương hiệu VINATEA.
             </p>
+        </div>
 
+        <!-- Bổ sung thông tin: Lĩnh vực, Nhãn hiệu, Sản phẩm -->
+        <div class="px-2 sm:px-4 mb-4 sm:mb-5 -mt-1 sm:mt-0 relative z-20 w-full max-w-2xl mx-auto">
+            <div class="flex flex-row justify-center items-stretch gap-2 sm:gap-4 w-full">
+
+                <!-- Col 1: Lĩnh vực -->
+                <div class="w-0 flex-1 flex flex-col items-center">
+                    <h4
+                        class="font-extrabold text-[clamp(6px,1.5vw,11px)] uppercase text-[#426a1e] mb-0.5 sm:mb-1 text-center leading-tight min-h-[24px] sm:min-h-[28px] flex items-end justify-center whitespace-nowrap">
+                        Lĩnh vực
+                    </h4>
+                    <div
+                        class="w-full border-[2px] border-[#c89215] rounded-[8px] sm:rounded-[10px] py-1.5 sm:py-2 px-1 sm:px-2 font-black text-[clamp(7px,1.8vw,12.5px)] bg-[#fdf7e3] text-center shadow-sm flex items-center justify-center flex-1 overflow-hidden">
+                        <span class="text-3d-yellow uppercase tracking-wide whitespace-nowrap">NÔNG SẢN</span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Nhãn hiệu -->
+                <div class="w-0 flex-[2] flex flex-col items-center">
+                    <h4
+                        class="font-extrabold text-[clamp(6px,1.5vw,11px)] uppercase text-[#426a1e] mb-0.5 sm:mb-1 text-center leading-tight min-h-[24px] sm:min-h-[28px] flex items-end justify-center whitespace-nowrap">
+                        Nhãn hiệu doanh nghiệp
+                    </h4>
+                    <div
+                        class="w-full border-[2px] border-[#c89215] rounded-[8px] sm:rounded-[10px] pt-1.5 pb-0.5 sm:pt-2 sm:pb-1 px-1 sm:px-2 bg-[#fdf7e3] text-center shadow-sm flex flex-col items-center justify-center flex-1 overflow-hidden">
+                        <span
+                            class="font-black text-[clamp(7px,2vw,12px)] text-3d-yellow uppercase tracking-tight sm:tracking-wider leading-[1.1] sm:leading-[1.2] mb-0 whitespace-nowrap">
+                            TỔNG CÔNG TY CHÈ VIỆT NAM<br>- CTCP VINATEA
+                        </span>
+                        <span
+                            class="text-[clamp(5px,1vw,8px)] font-semibold text-gray-600 tracking-tight whitespace-nowrap">(có
+                            kèm logo
+                            VINATEA)</span>
+                    </div>
+                </div>
+
+                <!-- Col 3: Sản phẩm -->
+                <div class="w-0 flex-1 flex flex-col items-center">
+                    <h4
+                        class="font-extrabold text-[clamp(6px,1.5vw,11px)] uppercase text-[#426a1e] mb-0.5 sm:mb-1 text-center leading-tight min-h-[24px] sm:min-h-[28px] flex items-end justify-center whitespace-nowrap">
+                        Sản phẩm
+                    </h4>
+                    <div
+                        class="w-full border-[2px] border-[#c89215] rounded-[8px] sm:rounded-[10px] py-1.5 sm:py-2 px-1 sm:px-2 font-black text-[clamp(7px,1.8vw,12.5px)] bg-[#fdf7e3] text-center shadow-sm flex items-center justify-center flex-1 overflow-hidden">
+                        <span class="text-3d-yellow uppercase tracking-wide whitespace-nowrap">TRÀ VINATEA</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="px-6 text-center">
             <div
-                class="inline-flex items-center gap-2 border border-vinatea-dark rounded-full px-5 py-2 mb-8 bg-white shadow-sm">
+                class="inline-flex items-center gap-2 border border-vinatea-dark rounded-full px-5 py-2 mb-5 sm:mb-6 bg-white shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-vinatea-dark" viewBox="0 0 20 20"
                     fill="currentColor">
                     <path fill-rule="evenodd"
@@ -233,49 +292,6 @@
 
         </div>
 
-        <!-- Bổ sung thông tin: Lĩnh vực, Nhãn hiệu, Sản phẩm -->
-        <div class="px-2 sm:px-6 mb-2 relative z-20">
-            <div class="grid grid-cols-3 gap-2 sm:gap-4">
-                <!-- Hàng 1: Tiêu đề -->
-                <div class="flex items-center justify-center pb-1 sm:pb-2">
-                    <h4
-                        class="font-bold text-[10px] sm:text-sm uppercase tracking-wide text-gray-800 text-center leading-tight">
-                        Lĩnh vực</h4>
-                </div>
-                <div class="flex items-center justify-center pb-1 sm:pb-2">
-                    <h4
-                        class="font-bold text-[10px] sm:text-sm uppercase tracking-wide text-gray-800 text-center leading-tight">
-                        Nhãn hiệu doanh nghiệp</h4>
-                </div>
-                <div class="flex items-center justify-center pb-1 sm:pb-2">
-                    <h4
-                        class="font-bold text-[10px] sm:text-sm uppercase tracking-wide text-gray-800 text-center leading-tight">
-                        Sản phẩm</h4>
-                </div>
-
-                <!-- Hàng 2: Shape vàng -->
-                <div
-                    class="border-2 border-[#FFD700] rounded-lg sm:rounded-xl py-2 px-1 sm:py-3 sm:px-4 font-bold text-[11px] sm:text-lg bg-white text-center shadow-sm flex items-center justify-center">
-                    NÔNG SẢN
-                </div>
-                <div
-                    class="border-2 border-[#FFD700] rounded-lg sm:rounded-xl py-2 px-1 sm:py-3 sm:px-4 font-bold text-[9px] sm:text-sm bg-white text-center shadow-sm flex items-center justify-center leading-tight">
-                    TỔNG CÔNG TY CHÈ VIỆT NAM - CTCP VINATEA
-                </div>
-                <div
-                    class="border-2 border-[#FFD700] rounded-lg sm:rounded-xl py-2 px-1 sm:py-3 sm:px-4 font-bold text-[11px] sm:text-lg bg-white text-center shadow-sm flex items-center justify-center">
-                    TRÀ VINATEA
-                </div>
-
-                <!-- Hàng 3: Chú thích (logo) -->
-                <div></div>
-                <div class="flex items-start justify-center pt-1">
-                    <span class="text-[9px] sm:text-sm font-medium italic text-center text-gray-600">(có kèm logo
-                        vinatea)</span>
-                </div>
-                <div></div>
-            </div>
-        </div>
 
         <!-- Phần Footer & Lưu ý -->
         <div class="mt-auto relative z-10 overflow-hidden sm:rounded-b-2xl">
